@@ -1,0 +1,28 @@
+<app-generic-list [list]="movies">
+  <ng-container content>
+    <div class="movies-container">
+      <div *ngFor="let movie of movies; let i = index" class="movie-container">
+        <div>
+          <h3>
+            <button class="delete-movie-btn" (click)="remove(i)">Remove</button>
+            <app-rating style="margin-left: 1em;" (rated)="processVote($event)"></app-rating>
+          </h3>
+          <a>
+            <img [src]="movie.poster" alt="Poster">
+          </a>
+          <p>
+            <a>{{movie.title}}</a>
+          </p>
+          <div>
+            <a mat-flat-button color="primary">
+              Editar
+            </a>
+            <button mat-flat-button color="warn">
+              Borrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-generic-list>
