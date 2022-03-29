@@ -1,5 +1,3 @@
-<button mat-flat-button color="primary" routerLink="/genres/create"
-    (click)="saveChanges()"
->
-    Guardar cambios
-</button>
+<h2>Crear G&eacute;nero</h2>
+
+<app-genre-form (onSubmit)="saveChanges($event)"></app-genre-form>

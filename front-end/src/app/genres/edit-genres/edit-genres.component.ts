@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { genreCreationDTO } from '../genre-form/genre';
 
 @Component({
   selector: 'app-edit-genres',
@@ -8,9 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditGenresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  model: genreCreationDTO;
 
   ngOnInit(): void {
+  }
+
+  saveChanges(genre: genreCreationDTO): void{
+    //mermelada to do
+    this.router.navigate(['/genres']);
   }
 
 }

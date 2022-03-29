@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
@@ -21,6 +22,8 @@ import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { EditTheaterComponent } from './theaters/edit-theater/edit-theater.component';
 import { EditGenresComponent } from './genres/edit-genres/edit-genres.component';
+import { GenreFormComponent } from './genres/genre-form/genre-form.component';
+import { FilterMoviesComponent } from './movies/filter-movies/filter-movies.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +43,16 @@ import { EditGenresComponent } from './genres/edit-genres/edit-genres.component'
     EditActorComponent,
     EditMovieComponent,
     EditTheaterComponent,
-    EditGenresComponent
+    EditGenresComponent,
+    GenreFormComponent,
+    FilterMoviesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

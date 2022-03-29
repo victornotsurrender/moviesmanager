@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { genreCreationDTO } from '../genre-form/genre';
 
 @Component({
   selector: 'app-create-genre',
   templateUrl: './create-genre.component.html',
   styleUrls: ['./create-genre.component.css']
 })
-export class CreateGenreComponent implements OnInit {
+export class CreateGenreComponent{
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
-
-  saveChanges(): void{
+  saveChanges(genre: genreCreationDTO): void{
     //mermelada to do
     this.router.navigate(['/genres']);
   }
